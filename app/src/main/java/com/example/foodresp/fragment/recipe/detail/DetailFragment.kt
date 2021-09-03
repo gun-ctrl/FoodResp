@@ -43,7 +43,7 @@ class DetailFragment:Fragment() {
             if (!binding.ingredientBtn.isSelected){
                 binding.ingredientBtn.isSelected = true
                 binding.detailBtn.isSelected = false
-                val space = binding.detailBtn.x - binding.ingredientBtn.x
+                val space = binding.ingredientBtn.x - binding.detailBtn.x
                 indicatorAnim(space)
             }
         }
