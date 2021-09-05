@@ -1,13 +1,12 @@
-package com.example.foodresp.fragment.recipe
+package com.example.foodresp.fragment.recipe.adapter
 
-import android.graphics.Path
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.foodresp.R
 import com.example.foodresp.data.model.Result
 import com.example.foodresp.databinding.FoodItemBinding
+import com.example.foodresp.fragment.recipe.RecipeFragmentDirections
 
 /**
  *@Description
@@ -18,7 +17,7 @@ class FoodAdapter:RecyclerView.Adapter<FoodAdapter.MyViewHolder> (){
     private var recipeList:List<Result> = emptyList()
     class MyViewHolder(val binding:FoodItemBinding):RecyclerView.ViewHolder(binding.root){
         companion object{
-            fun from(parent: ViewGroup):MyViewHolder{
+            fun from(parent: ViewGroup): MyViewHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val binding = FoodItemBinding.inflate(inflater)
                 return MyViewHolder(binding)

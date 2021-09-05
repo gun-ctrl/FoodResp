@@ -1,4 +1,4 @@
-package com.example.foodresp.fragment.recipe
+package com.example.foodresp.fragment.recipe.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -20,7 +20,7 @@ class TypeAdapter:RecyclerView.Adapter<TypeAdapter.MyViewHolder>() {
         //数据回调
         var callBack:((Int)->Unit)?=null
         companion object{
-            fun from(parent: ViewGroup):MyViewHolder{
+            fun from(parent: ViewGroup): MyViewHolder {
                 //创建ViewHolder
                 val inflater = LayoutInflater.from(parent.context)
                 return MyViewHolder(ItemTypeBinding.inflate(inflater))
@@ -41,7 +41,7 @@ class TypeAdapter:RecyclerView.Adapter<TypeAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val holder =  MyViewHolder.from(parent)
+        val holder = MyViewHolder.from(parent)
         //处理点击之后的回调事件
         holder.callBack = {
             //点的是不是同一个

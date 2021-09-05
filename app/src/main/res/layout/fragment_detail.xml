@@ -263,5 +263,15 @@
             app:layout_constraintStart_toEndOf="@+id/detailBtn"
             app:layout_constraintTop_toTopOf="@+id/detailBtn" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/chip6"
+            app:layout_constraintStart_toStartOf="@+id/chip4"
+            app:layout_constraintTop_toBottomOf="@+id/chip8" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

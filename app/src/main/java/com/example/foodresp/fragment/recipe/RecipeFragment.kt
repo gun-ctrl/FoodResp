@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodresp.utils.NetworkResult
 import com.example.foodresp.databinding.FragmentRecipeBinding
+import com.example.foodresp.fragment.recipe.adapter.FoodAdapter
+import com.example.foodresp.fragment.recipe.adapter.TypeAdapter
 import com.example.foodresp.viewModel.MainViewModel
 
 
