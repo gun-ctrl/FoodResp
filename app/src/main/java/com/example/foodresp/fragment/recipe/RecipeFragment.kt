@@ -30,7 +30,7 @@ class RecipeFragment : Fragment() {
         binding = FragmentRecipeBinding.inflate(inflater)
         initRecyclerView()
         initFoodRecyclerView()
-        mainViewModel.recipes.observe(viewLifecycleOwner, Observer {
+        mainViewModel.recipes.observe(viewLifecycleOwner, {
             when(it){
                 is NetworkResult.Success ->{
                     binding.foodRecyclerView.hideShimmer()
@@ -47,8 +47,7 @@ class RecipeFragment : Fragment() {
             }
 
         })
-
-
+        fetchData("main course")
         return binding.root
     }
 

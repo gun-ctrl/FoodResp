@@ -1,6 +1,13 @@
 package com.example.foodresp.data.local
 
 import android.content.Context
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.example.foodresp.data.local.entity.FavoriteEntity
+import com.example.foodresp.data.local.entity.RecipeEntity
+import com.example.foodresp.data.model.Result
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -24,6 +31,20 @@ class LocalRepository(context: Context){
     //更新数据
     suspend fun updateRecipe(recipeEntity: RecipeEntity){
         recipeDao.updateRecipe(recipeEntity)
+    }
+
+    //查询所有收藏的食谱
+    fun getAllFavorites():Flow<List<FavoriteEntity>>{
+        return recipeDao.getAllFavorites()
+    }
+    //插入收藏的食谱
+    fun insertFavorite(favoriteEntity: FavoriteEntity){
+        recipeDao.insertFavorite(favoriteEntity)
+    }
+
+    //删除收藏
+    fun deleteFavorite(favoriteEntity: FavoriteEntity){
+        recipeDao.deleteFavorite(favoriteEntity)
     }
 
 }

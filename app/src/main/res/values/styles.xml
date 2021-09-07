@@ -12,4 +12,8 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">85dp</item>
     </style>
+    <style name="circleImageFavoriteStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">60dp</item>
+    </style>
 </resources>

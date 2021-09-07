@@ -8,11 +8,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.foodresp.data.local.LocalRepository
-import com.example.foodresp.data.local.RecipeEntity
+import com.example.foodresp.data.local.entity.RecipeEntity
 import com.example.foodresp.utils.NetworkResult
 import com.example.foodresp.data.model.FoodRecipe
 import com.example.foodresp.data.remote.RemoteRepository
-import com.example.foodresp.utils.showToast
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -24,7 +23,7 @@ import kotlinx.coroutines.launch
 class MainViewModel(application: Application):AndroidViewModel(application) {
     //网络请求对象
     private val remoteRepository = RemoteRepository()
-    private val localRepository = LocalRepository(application)
+    private val localRepository = LocalRepository(getApplication())
 
     //提供给外部观察数据变化
     var recipes: MutableLiveData<NetworkResult<FoodRecipe>> = MutableLiveData()

@@ -24,18 +24,18 @@ object BindingAdapter {
     }
 
     @JvmStatic
-    @BindingAdapter("loadIngredientImageWithUrl")
-    fun loadIngredientImageWithUrl(imageView: ImageView,name:String){
+    @BindingAdapter("loadIngredientImageWithName")
+    fun loadIngredientImageWithName(imageView: ImageView,name:String){
         //将url对应的图片下载下来 显示到imageView上
         //Glide
-        val imageBaseUrl = "https://spoonacular.com/recipeImages/"
-        Glide.with(imageView.context).load(imageBaseUrl+name).into(imageView)
+        val imageBaseUrl = "https://spoonacular.com/cdn/ingredients_250×250/"
+        Glide.with(imageView.context)
+                .load(imageBaseUrl+name)
+                //设置默认图片 未加载完成时显示的图片
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(imageView)
     }
-    @JvmStatic
-    @BindingAdapter("navigateToDetail")
-    fun navigateToDetail(view:View,result:Result){
-        view.findNavController().navigate(R.id.action_recipeFragment_to_detailFragment)
-    }
+
 
     @JvmStatic
     @BindingAdapter("changeStatus")

@@ -2,6 +2,7 @@ package com.example.foodresp.utils
 
 import androidx.room.TypeConverter
 import com.example.foodresp.data.model.FoodRecipe
+import com.example.foodresp.data.model.Result
 import com.google.gson.Gson
 
 /**
@@ -20,5 +21,14 @@ class RecipeTypeConverter {
     @TypeConverter
     fun stringToFoodRecipe(string: String):FoodRecipe{
         return Gson().fromJson(string,FoodRecipe::class.java)
+    }
+
+    @TypeConverter
+    fun resultToString(recipe:Result):String{
+        return Gson().toJson(recipe)
+    }
+    @TypeConverter
+    fun stringToResult(str:String):Result{
+        return Gson().fromJson(str,Result::class.java)
     }
 }

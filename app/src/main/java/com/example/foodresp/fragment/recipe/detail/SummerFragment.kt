@@ -7,15 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.foodresp.R
 import com.example.foodresp.databinding.FragmentSummerBinding
+import org.jsoup.Jsoup
 
 
 class SummerFragment(private val summary:String) : Fragment() {
     private lateinit var binding:FragmentSummerBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
+
         binding = FragmentSummerBinding.inflate(inflater)
-        binding.summaryTextView.text = summary
+        binding.summaryTextView.text = Jsoup.parse(summary).text()
         return binding.root
     }
 
