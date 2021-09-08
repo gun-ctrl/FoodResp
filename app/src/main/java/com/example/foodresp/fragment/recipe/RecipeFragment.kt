@@ -47,7 +47,7 @@ class RecipeFragment : Fragment() {
             }
 
         })
-        fetchData("main course")
+       fetchData("main course")
         return binding.root
     }
 

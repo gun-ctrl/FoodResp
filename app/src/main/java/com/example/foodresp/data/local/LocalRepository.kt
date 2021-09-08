@@ -1,13 +1,8 @@
 package com.example.foodresp.data.local
 
 import android.content.Context
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
 import com.example.foodresp.data.local.entity.FavoriteEntity
 import com.example.foodresp.data.local.entity.RecipeEntity
-import com.example.foodresp.data.model.Result
 import kotlinx.coroutines.flow.Flow
 
 /**

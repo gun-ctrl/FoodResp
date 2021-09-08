@@ -27,9 +27,9 @@ class IngredientFragment(private val ingredientList:List<ExtendedIngredient>) : 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.ingredientRecylerView.layoutManager = LinearLayoutManager(
+        binding.ingredientRecyclerView.layoutManager = LinearLayoutManager(
                 context,RecyclerView.HORIZONTAL,false)
-        binding.ingredientRecylerView.adapter = ingredientAdapter
+        binding.ingredientRecyclerView.adapter = ingredientAdapter
         ingredientAdapter.setData(ingredientList)
     }
 

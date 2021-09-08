@@ -29,6 +29,7 @@ interface RecipeDao {
     //查询所有收藏的食谱
     @Query("select * from favorite_table")
     fun getAllFavorites():Flow<List<FavoriteEntity>>
+
     //插入收藏的食谱
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertFavorite(favoriteEntity: FavoriteEntity)

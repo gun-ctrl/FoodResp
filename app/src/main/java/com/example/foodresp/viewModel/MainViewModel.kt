@@ -23,6 +23,7 @@ import kotlinx.coroutines.launch
 class MainViewModel(application: Application):AndroidViewModel(application) {
     //网络请求对象
     private val remoteRepository = RemoteRepository()
+    //数据库的操作对象
     private val localRepository = LocalRepository(getApplication())
 
     //提供给外部观察数据变化

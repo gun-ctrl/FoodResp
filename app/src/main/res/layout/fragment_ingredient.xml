@@ -8,7 +8,7 @@
     tools:context=".fragment.recipe.detail.IngredientFragment" >
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ingredientRecylerView"
+        android:id="@+id/ingredientRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
