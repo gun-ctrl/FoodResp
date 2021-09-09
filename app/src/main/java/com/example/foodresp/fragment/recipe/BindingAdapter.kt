@@ -28,7 +28,7 @@ object BindingAdapter {
     fun loadIngredientImageWithName(imageView: ImageView,name:String){
         //将url对应的图片下载下来 显示到imageView上
         //Glide
-        val imageBaseUrl = "https://spoonacular.com/cdn/ingredients_250×250/"
+        val imageBaseUrl = "https://spoonacular.com/cdn/ingredients_250x250/"
         Glide.with(imageView.context)
                 .load(imageBaseUrl+name)
                 //设置默认图片 未加载完成时显示的图片

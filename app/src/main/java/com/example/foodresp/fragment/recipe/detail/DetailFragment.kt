@@ -26,6 +26,7 @@ class DetailFragment:Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetailBinding.inflate(inflater)
+        binding.detailBtn.isSelected = true
         return binding.root
     }
 

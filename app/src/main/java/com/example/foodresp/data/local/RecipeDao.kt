@@ -32,9 +32,9 @@ interface RecipeDao {
 
     //插入收藏的食谱
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertFavorite(favoriteEntity: FavoriteEntity)
+    suspend fun insertFavorite(favoriteEntity: FavoriteEntity)
 
     //删除收藏
     @Delete
-    fun deleteFavorite(favoriteEntity: FavoriteEntity)
+    suspend fun deleteFavorite(favoriteEntity: FavoriteEntity)
 }

@@ -33,12 +33,12 @@ class LocalRepository(context: Context){
         return recipeDao.getAllFavorites()
     }
     //插入收藏的食谱
-    fun insertFavorite(favoriteEntity: FavoriteEntity){
+    suspend fun insertFavorite(favoriteEntity: FavoriteEntity){
         recipeDao.insertFavorite(favoriteEntity)
     }
 
     //删除收藏
-    fun deleteFavorite(favoriteEntity: FavoriteEntity){
+    suspend fun deleteFavorite(favoriteEntity: FavoriteEntity){
         recipeDao.deleteFavorite(favoriteEntity)
     }
 
