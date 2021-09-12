@@ -12,6 +12,7 @@ import com.example.foodresp.data.local.entity.RecipeEntity
 import com.example.foodresp.utils.NetworkResult
 import com.example.foodresp.data.model.FoodRecipe
 import com.example.foodresp.data.remote.RemoteRepository
+import com.example.foodresp.utils.showToast
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
@@ -59,6 +60,8 @@ class MainViewModel(application: Application):AndroidViewModel(application) {
                 }
             }
         } else {
+            //没有网络连接
+            showToast(getApplication(),"No Internet Connection")
             viewModelScope.launch {
                 val result = localRepository.getRecipes(type)
                 result.collect {
