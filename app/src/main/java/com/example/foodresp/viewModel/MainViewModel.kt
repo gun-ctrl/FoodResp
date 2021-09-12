@@ -69,6 +69,8 @@ class MainViewModel(application: Application):AndroidViewModel(application) {
                         val entity = it.first()
                         val data = entity.recipe
                         recipes.value = NetworkResult.Success(data)
+                    }else{
+                        recipes.value = NetworkResult.Error("NO Data!")
                     }
                 }
             }
