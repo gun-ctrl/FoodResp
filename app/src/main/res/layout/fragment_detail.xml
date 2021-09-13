@@ -227,6 +227,7 @@
             android:layout_width="210dp"
             android:layout_height="60dp"
             android:backgroundTint="#333233"
+            android:enabled="false"
             app:layout_constraintBottom_toBottomOf="@+id/detailBtn"
             app:layout_constraintEnd_toEndOf="@+id/detailBtn"
             app:layout_constraintStart_toStartOf="@+id/chip8"

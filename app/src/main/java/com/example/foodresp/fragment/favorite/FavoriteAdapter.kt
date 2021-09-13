@@ -2,6 +2,7 @@ package com.example.foodresp.fragment.favorite
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.foodresp.data.model.Result
 import com.example.foodresp.databinding.FavoriteItemBinding
@@ -24,6 +25,10 @@ class FavoriteAdapter:RecyclerView.Adapter<FavoriteAdapter.MyViewHolder>() {
         fun bind(result: Result){
             binding.recipe = result
             binding.executePendingBindings()
+            binding.favoritecontainer.setOnClickListener {
+                val action = FavoriteFragmentDirections.actionFavoriteFragmentToDetailFragment(result)
+                binding.favoritecontainer.findNavController().navigate(action)
+            }
         }
 
     }

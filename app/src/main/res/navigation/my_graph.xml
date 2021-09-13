@@ -22,7 +22,15 @@
         android:id="@+id/favoriteFragment"
         android:name="com.example.foodresp.fragment.favorite.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/enter_anim"
+            app:exitAnim="@anim/out_anim"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_out" />
+    </fragment>
     <fragment
         android:id="@+id/otherFragment"
         android:name="com.example.foodresp.fragment.other.OtherFragment"

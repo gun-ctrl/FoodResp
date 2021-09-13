@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <View
-            android:id="@+id/view12"
+            android:id="@+id/favoritecontainer"
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:layout_marginBottom="16dp"
@@ -58,7 +58,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/imageView7"
-            app:layout_constraintStart_toStartOf="@+id/view12"
+            app:layout_constraintStart_toStartOf="@+id/favoritecontainer"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Homemade Garlic French Fries"
             android:text="@{recipe.title}"/>
