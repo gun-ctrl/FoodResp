@@ -59,7 +59,7 @@ class FavoriteFragment : Fragment() {
                 val data = favoriteViewModel.favoriteRecipes.value!![index]
                 favoriteViewModel.deleteFavorite(data)
                 //弹出提示信息
-               Toast.makeText(requireContext(),"Delete Finished!",Toast.LENGTH_LONG)
+               Toast.makeText(requireContext(),"Delete Finished!",Toast.LENGTH_LONG).show()
             }
 
         })
