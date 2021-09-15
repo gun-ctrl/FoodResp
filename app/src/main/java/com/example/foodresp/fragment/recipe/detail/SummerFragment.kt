@@ -20,5 +20,4 @@ class SummerFragment(private val summary:String) : Fragment() {
         return binding.root
     }
 
-
 }

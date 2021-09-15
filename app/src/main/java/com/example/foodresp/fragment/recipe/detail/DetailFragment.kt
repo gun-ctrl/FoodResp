@@ -87,7 +87,6 @@ class DetailFragment:Fragment() {
             }
         }
         binding.viewPager.registerOnPageChangeCallback(object:ViewPager2.OnPageChangeCallback(){
-
             override fun onPageSelected(position: Int) {
                 if (position==0){
                     selectDetail()
