@@ -31,7 +31,6 @@ class TypeAdapter:RecyclerView.Adapter<TypeAdapter.MyViewHolder>() {
             binding.titleTextView.text = type
             binding.titleTextView.setOnClickListener {
                 callBack?.let {it(position) }
-                changeSelectedStatus(true)
 
             }
         }
